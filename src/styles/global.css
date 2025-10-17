@@ -1,0 +1,57 @@
+:root {
+  --color-primary: #0c2046;
+  --color-accent: #f1a9d6;
+  /* --color-accent: #f16fcc; */
+  --color-on-primary: #e3e6e8;
+  --color-muted: #d0d4dd;
+  --surface-bg: #ffffff;
+  --surface-text: #111827;
+  --surface-border: #e5e7eb;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+b,
+strong {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+/* Override MUI Typography (it sets its own family from the theme) */
+.MuiTypography-root {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}
+
+/* Use Playfair Display for headings rendered via MUI Typography */
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}
+
+/* Buttons, menu items, tabs, drawer list items, etc. */
+.MuiButton-root,
+.MuiListItemText-root,
+.MuiMenuItem-root,
+.MuiTab-root,
+.MuiListItemButton-root {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}
