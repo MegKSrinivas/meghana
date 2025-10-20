@@ -2,76 +2,171 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  font-family: var(--font-body);
 }
 
-.nav__toolbar {
+.nav_toolbar {
   padding-block: 12px;
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-.nav__brandLink {
+.nav_brand {
+  font-weight: 400;
+}
+.nav_brandLink {
   color: var(--color-on-primary, #fff) !important;
   text-decoration: none;
 }
-.nav__brandLink:hover {
+.nav_brandLink:hover {
   color: var(--color-accent, #f1a9d6) !important;
 }
 
-.nav__links {
+.nav_links {
   display: none;
   gap: 24px;
   flex-grow: 1;
 }
 @media (min-width: 900px) {
-  .nav__links {
+  .nav_links {
     display: flex;
   }
 }
 
-.nav .nav__link {
+.nav .nav_link {
   color: var(--color-on-primary, #fff) !important;
   text-transform: none;
   border-radius: 8px;
+  font-weight: 400;
   text-decoration: none;
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
 }
-.nav .nav__link:hover {
+.nav .nav_link:hover {
   color: var(--color-accent, #f1a9d6) !important;
   background-color: transparent;
 }
-.nav .nav__link.is-active {
+.nav .nav_link.is-active {
   color: var(--color-accent, #f1a9d6) !important;
+  font-weight: 400;
 }
 
-.nav__hamburger {
+.nav_icons {
+  display: none;
+  gap: 12px;
   margin-left: auto;
-  color: var(--color-on-primary, #fff);
 }
 @media (min-width: 900px) {
-  .nav__hamburger {
+  .nav_icons {
+    display: flex;
+  }
+}
+
+.nav_icon {
+  color: var(--color-on-primary, #fff);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+.nav_icon:hover {
+  color: var(--color-accent, #f1a9d6);
+}
+
+.nav_hamburger {
+  margin-left: auto;
+  color: var(--color-on-primary, #fff);
+  transition: color 0.2s ease;
+}
+@media (min-width: 900px) {
+  .nav_hamburger {
     display: none;
   }
 }
 
-.nav__drawer {
-  width: 280px;
-}
-.nav__drawerTitle {
-  margin-bottom: 8px;
-  font-weight: 700;
+.nav_drawer {
+  width: 320px;
+  background: rgba(10, 25, 47, 0.95) !important;
+  backdrop-filter: blur(6px);
   color: var(--color-on-primary, #fff);
 }
-.nav .nav__drawerItem {
+.nav_drawerContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  gap: 8px;
+}
+.nav_drawerTitle {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: var(--color-on-primary, #fff);
+}
+.nav_drawerList {
+  margin-top: 8px;
+}
+
+.nav .nav_drawerItem {
   border-radius: 8px;
   color: var(--color-on-primary, #fff) !important;
   transition: color 0.2s ease;
 }
-.nav .nav__drawerItem:hover,
-.nav .nav__drawerItem.is-active {
+.nav .nav_drawerItem:hover,
+.nav .nav_drawerItem.is-active {
+  color: var(--color-accent, #f1a9d6) !important;
+}
+
+.nav_drawer .MuiTypography-root,
+.nav_drawer .MuiListItemText-root,
+.nav_drawer .MuiListItemText-primary,
+.nav_drawer .MuiSvgIcon-root {
+  color: var(--color-on-primary, #fff) !important;
+}
+
+.nav .nav_drawerItem:hover .MuiListItemText-primary,
+.nav .nav_drawerItem:hover .MuiSvgIcon-root {
+  color: var(--color-accent, #f1a9d6) !important;
+}
+
+.nav_drawerIcons {
+  margin-top: auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.nav_drawerIcons .nav_icon,
+.nav_drawerIcons .nav_icon svg {
+  color: var(--color-on-primary, #fff);
+  transition: color 0.2s ease;
+}
+.nav_drawerIcons .nav_icon:hover,
+.nav_drawerIcons .nav_icon:hover svg {
+  color: var(--color-accent, #f1a9d6);
+}
+
+.nav_hamburger,
+.nav_hamburger svg {
+  color: var(--color-on-primary, #fff) !important;
+}
+.nav_hamburger:hover,
+.nav_hamburger:hover svg {
+  color: var(--color-accent, #f1a9d6) !important;
+}
+
+.nav_hamburger.MuiIconButton-root:hover,
+.nav_hamburger.MuiIconButton-root:hover svg {
+  color: var(--color-accent, #f1a9d6) !important;
+}
+
+.nav_drawer .MuiListItemButton-root:hover,
+.nav_drawer .MuiListItemButton-root:hover .MuiListItemText-primary,
+.nav_drawer .MuiListItemButton-root:hover .MuiTypography-root,
+.nav_drawer .MuiListItemButton-root:hover .MuiSvgIcon-root {
+  color: var(--color-accent, #f1a9d6) !important;
+}
+
+.nav_drawerIcons .nav_icon:hover,
+.nav_drawerIcons .nav_icon:hover svg {
   color: var(--color-accent, #f1a9d6) !important;
 }

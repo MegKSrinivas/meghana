@@ -1,5 +1,6 @@
 :root {
   --color-primary: #0c2046;
+  /* --color-primary: rgba(10, 25, 47, 0.95); */
   --color-accent: #f1a9d6;
   /* --color-accent: #f16fcc; */
   --color-on-primary: #e3e6e8;
