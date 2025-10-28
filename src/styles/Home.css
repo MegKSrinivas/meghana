@@ -1,0 +1,66 @@
+/* layout */
+.home {
+  min-height: 70vh;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 16px;
+  padding: 48px 16px;
+  width: min(100%, 800px);
+  margin: 0 auto;
+}
+
+/* accent word */
+.accent {
+  color: var(--color-accent, #f1a9d6);
+  font-weight: 400;
+}
+
+/* heading + typing effect */
+.home_title {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 48px);
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.home_typing {
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--color-on-primary, #fff);
+  width: 0ch;
+  animation:
+    typing 1.8s steps(17, end) forwards,
+    blink 900ms steps(1) infinite;
+}
+
+.home_paragraph {
+  margin: 0;
+  color: var(--color-on-primary, #fff);
+  opacity: 0.85;
+  max-width: 60ch;
+  font-size: clamp(14px, 1.9vw, 18px);
+  line-height: 1.65;
+}
+
+/* keyframes */
+@keyframes typing {
+  to {
+    width: 17ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home_typing {
+    width: auto;
+    border-right: 0;
+    animation: none;
+  }
+}

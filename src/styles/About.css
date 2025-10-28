@@ -1,0 +1,16 @@
+.about {
+  min-height: 70vh;
+  padding: 48px 16px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.about_section {
+  text-align: left;
+}
+/* .about_image {
+  text-align: center;
+} */
