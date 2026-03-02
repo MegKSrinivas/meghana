@@ -2,19 +2,18 @@ import '../styles/Home.css';
 
 export default function HomePage() {
   return (
-    <section className="home">
+    <section id="home" className="home">
       <h1 className="home_title">
-        <span className="home_typing">
-          hi,&nbsp;<span className="accent">meghana</span>&nbsp;here.
+        <span className="home_typing_wrapper">
+          <span className="home_typing">
+            hi,&nbsp;<span className="accent">meghana</span>&nbsp;here.
+          </span>
         </span>
       </h1>
-
       <p className="home_paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        condimentum, neque at bibendum finibus, lectus nibh cursus velit, a
-        dictum justo dui eget lorem. Curabitur venenatis, arcu vitae maximus
-        suscipit, turpis massa malesuada sem, vitae fermentum nisi sapien at
-        risus.
+        I build things that turn big ideas into meaningful impacts. I’m a
+        Software Development Engineer who enjoys creating intuitive systems and
+        experiences.
       </p>
     </section>
   );

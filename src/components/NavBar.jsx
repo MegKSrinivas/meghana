@@ -11,7 +11,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
@@ -26,6 +26,7 @@ const LINKS = [
   { to: '/about', label: 'About' },
   { to: '/experience', label: 'Experience' },
   { to: '/projects', label: 'Projects' },
+  { to: '/education', label: 'Education' },
 ];
 
 export default function NavBar() {
@@ -34,7 +35,19 @@ export default function NavBar() {
   const isDesktop = useMediaQuery(theme.breakpoints.up('md')); // md+ desktop, <md mobile
 
   const [open, setOpen] = useState(false);
+  const [scrolledPastHome, setScrolledPastHome] = useState(false);
   const toggle = (v) => () => setOpen(v);
+
+  useEffect(() => {
+    const home = document.getElementById('home');
+    if (!home) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setScrolledPastHome(!entry.isIntersecting),
+      { threshold: 0, rootMargin: '-72px 0px 0px 0px' },
+    );
+    observer.observe(home);
+    return () => observer.disconnect();
+  }, []);
 
   const EXT = {
     email: 'mailto:meghanaksrinivas@gmail.com',
@@ -43,7 +56,12 @@ export default function NavBar() {
   };
 
   return (
-    <AppBar position="sticky" color="transparent" elevation={0} className="nav">
+    <AppBar
+      position="fixed"
+      color="transparent"
+      elevation={0}
+      className={`nav ${scrolledPastHome ? 'nav--scrolled' : ''}`}
+    >
       <Container maxWidth="lg">
         <Toolbar disableGutters className="nav_toolbar">
           <Typography

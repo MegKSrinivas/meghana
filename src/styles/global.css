@@ -12,17 +12,26 @@
   --font-body: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
-html,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 body,
 #root {
   height: 100%;
 }
 body {
-  margin: 0 10rem;
+  margin: 0 5rem;
+  padding-top: 0;
   background: var(--color-primary);
   color: var(--color-on-primary);
   font-family: var(--font-body);
   line-height: 1.6;
+}
+
+/* Reserve space for fixed navbar so content isn't hidden under it */
+#pages {
+  padding-top: 72px;
 }
 
 b,

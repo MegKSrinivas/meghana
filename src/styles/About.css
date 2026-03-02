@@ -11,6 +11,114 @@
 .about_section {
   text-align: left;
 }
-/* .about_image {
-  text-align: center;
-} */
+
+.about_intro {
+  margin: 0 0 1.5rem;
+}
+
+.about_toolsTitle {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  color: var(--color-muted, #d0d4dd);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about_skills {
+  margin-top: 0.25rem;
+}
+
+.about_skillGridItem {
+  height: 100%;
+  min-width: 0;
+}
+
+.about_skillCardWrap {
+  height: 100%;
+  min-width: 160px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.about_skillCardWrap:hover {
+  border-color: rgba(241, 169, 214, 0.4);
+  background: rgba(241, 169, 214, 0.08);
+  box-shadow: 0 0 0 1px rgba(241, 169, 214, 0.15);
+}
+
+.about_skillCard {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+.about_skillCard:hover .about_skillName {
+  color: var(--color-accent, #f1a9d6);
+}
+
+.about_skillIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about_skillIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about_skillContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.about_skillName {
+  font-size: 0.95rem;
+  color: var(--color-on-primary, #e3e6e8);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  justify-content: left;
+}
+
+.about_skillDesc {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-muted, #d0d4dd);
+}
+
+.about_photoPlaceholder h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-muted, #d0d4dd);
+}
+
+.about_profileImage {
+  margin-top: 4rem;
+  border-radius: 5rem;
+}

@@ -24,15 +24,19 @@
   letter-spacing: 0.2px;
 }
 
+.home_typing_wrapper {
+  display: inline-block;
+}
+
 .home_typing {
   display: inline-block;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid var(--color-on-primary, #fff);
-  width: 0ch;
+  width: 0%;
   animation:
-    typing 1.8s steps(17, end) forwards,
+    typing 1.8s steps(18, end) forwards,
     blink 900ms steps(1) infinite;
 }
 
@@ -48,7 +52,7 @@
 /* keyframes */
 @keyframes typing {
   to {
-    width: 17ch;
+    width: 100%;
   }
 }
 @keyframes blink {
@@ -58,8 +62,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home_typing {
-    width: auto;
+  .home_typing_wrapper .home_typing {
+    width: 100%;
     border-right: 0;
     animation: none;
   }

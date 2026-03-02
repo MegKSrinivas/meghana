@@ -1,7 +1,22 @@
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
+  background: transparent !important;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav.nav--scrolled {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 169, 214, 0.22),
+    rgba(12, 32, 70, 0.97) 35%,
+    rgba(12, 32, 70, 0.97)
+  ) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(241, 169, 214, 0.08);
 }
 
 .nav_toolbar {
