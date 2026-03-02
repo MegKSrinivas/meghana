@@ -1,0 +1,68 @@
+.education {
+  min-height: 70vh;
+  padding: 48px 16px;
+  margin: 0 auto;
+  width: min(100%, 1000px);
+}
+
+.education_heading {
+  margin: 0 0 2rem;
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 400;
+  color: var(--color-on-primary, #e3e6e8);
+}
+
+.education_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .education_cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education_card {
+  border-radius: 32px;
+  padding: 2rem 1.75rem;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(241, 169, 214, 0.2),
+      rgba(241, 169, 214, 0.08) 50%,
+      transparent 80%
+    ),
+    rgba(15, 23, 42, 0.9);
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(148, 163, 184, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.education_school {
+  margin: 0 0 0.5rem;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 400;
+  color: var(--color-accent, #f1a9d6);
+}
+
+.education_major {
+  margin: 0 0 0.5rem;
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: var(--color-on-primary, #e3e6e8);
+  line-height: 1.5;
+}
+
+.education_gpa {
+  margin: 0 0 0.25rem;
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: var(--color-muted, #d0d4dd);
+}
+
+.education_year {
+  margin: 0;
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: var(--color-muted, #d0d4dd);
+}
