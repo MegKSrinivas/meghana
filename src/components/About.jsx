@@ -29,15 +29,11 @@ export default function About() {
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
             <div className="about_section">
-              <h4> about me</h4>
+              <h4 className="about_title">About Me</h4>
               <p className="about_intro">
-                I&apos;m a software engineer who gets a little too excited about
-                clean code and well-named variables. By day I build things that
-                scale; by night I&apos;m an AI enthusiast falling down rabbit
-                holes and wondering if the model is having a good day. When
-                I&apos;m not at the keyboard, you&apos;ll find me on the
-                volleyball court, nose in a book, or messing with
-                paint—sometimes all three, depending on the weekend.
+                Add a short intro about yourself here—your background, what you
+                do, and what you care about. Keep it to a few sentences so
+                visitors get a quick sense of who you are.
               </p>
             </div>
           </Grid>

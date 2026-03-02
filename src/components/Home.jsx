@@ -1,3 +1,6 @@
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { Link } from 'react-router-dom';
+
 import '../styles/Home.css';
 
 export default function HomePage() {
@@ -15,6 +18,10 @@ export default function HomePage() {
         Software Development Engineer who enjoys creating intuitive systems and
         experiences.
       </p>
+      <Link to="/contactme" className="home_contactBtn">
+        <EmailOutlinedIcon className="home_contactBtnIcon" />
+        <span>Say Hello!</span>
+      </Link>
     </section>
   );
 }

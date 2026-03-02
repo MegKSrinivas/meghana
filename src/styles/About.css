@@ -12,8 +12,16 @@
   text-align: left;
 }
 
+.about_title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-on-primary, #e3e6e8);
+}
+
 .about_intro {
   margin: 0 0 1.5rem;
+  font-family: var(--font-secondary);
 }
 
 .about_toolsTitle {
@@ -97,6 +105,7 @@
 
 .about_skillName {
   font-size: 0.95rem;
+  font-family: var(--font-secondary);
   color: var(--color-on-primary, #e3e6e8);
   overflow: hidden;
   text-overflow: ellipsis;

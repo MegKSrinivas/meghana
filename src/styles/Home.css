@@ -47,6 +47,35 @@
   max-width: 60ch;
   font-size: clamp(14px, 1.9vw, 18px);
   line-height: 1.65;
+  font-family: var(--font-secondary);
+}
+
+.home_contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-accent, #f1a9d6);
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--color-accent, #f1a9d6);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.home_contactBtn:hover {
+  border-color: rgba(241, 169, 214, 0.4);
+  background: rgba(241, 169, 214, 0.08);
+  box-shadow: 0 0 0 1px rgba(241, 169, 214, 0.15);
+  color: var(--color-accent, #f1a9d6);
+}
+.home_contactBtnIcon {
+  font-size: 1rem;
 }
 
 /* keyframes */

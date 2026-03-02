@@ -1,19 +1,19 @@
 .experience {
-  min-height: 70vh;
-  padding: 48px 16px;
+  min-height: 92vh;
+  padding: 64px 16px 80px;
   margin: 0 auto;
   width: min(100%, 1000px);
 }
 
 .experience_heading {
-  margin: 0 0 2rem;
+  margin: 0 0 2.5rem;
   font-size: clamp(28px, 6vw, 48px);
   font-weight: 400;
   color: var(--color-on-primary, #e3e6e8);
 }
 
 .experience_item {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .experience_header {
@@ -22,7 +22,7 @@
 
 .experience_role {
   margin: 0 0 0.25rem;
-  font-size: clamp(18px, 2.5vw, 22px);
+  font-size: clamp(15px, 1.9vw, 18px);
   font-weight: 400;
   color: var(--color-accent, #f1a9d6);
 }
@@ -33,18 +33,18 @@
 }
 
 .experience_bullets {
-  margin: 1.5rem 0 0;
+  margin: 2rem 0 0;
   padding-left: 0;
   color: var(--color-on-primary, #e3e6e8);
   font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .experience_bulletItem {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .experience_bulletItem:last-child {
@@ -55,6 +55,23 @@
   font-size: 1rem;
   color: var(--color-accent, #f1a9d6);
   margin-top: 0.2rem;
+}
+
+.experience_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 2.25rem;
+}
+
+.experience_tag {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-on-primary, #e3e6e8);
+  background: rgba(241, 169, 214, 0.15);
+  border: 1px solid rgba(241, 169, 214, 0.35);
 }
 
 .experience_companyNav {
@@ -87,8 +104,23 @@
   color: var(--color-accent, #f1a9d6);
 }
 
-.experience_companyLabel {
+.experience_companyLabelBlock {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.experience_companyButton .experience_meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  opacity: 0.85;
+}
+
+.experience_companyLabel {
+  display: block;
+  font-size: 0.85rem;
 }
 
 .experience_companyIndicator {
